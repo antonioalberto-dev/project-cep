@@ -98,17 +98,14 @@ public class CEP {
 
     @Override
     public String toString() {
-        return "CEP{" +
-                "cep='" + cep + '\'' +
-                ", logradouro='" + logradouro + '\'' +
-                ", complemento='" + complemento + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", localidade='" + localidade + '\'' +
-                ", uf='" + uf + '\'' +
-                ", ibge='" + ibge + '\'' +
-                ", gia='" + gia + '\'' +
-                ", ddd='" + ddd + '\'' +
-                ", siafi='" + siafi + '\'' +
-                '}';
+        if (getCep()!=null)
+            return "CEP ENCONTRADO!\n" +
+                "CEP: " + getCep()+ '\n' +
+                "Logradouro: " + getLogradouro() + '\n' +
+                "Complemento: " + getComplemento() + '\n' +
+                "Bairro: " + getBairro() + '\n' +
+                "Localidade: " + getLocalidade() + '\n' +
+                "UF: " + getUf();
+        else return "CEP NÃO ENCONTRADO!";
     }
 }
